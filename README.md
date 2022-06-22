@@ -86,9 +86,9 @@ Don't be alarmed if some tests aren't passing when navigating to a route differe
 
 Start by installing the core dependencies for this project.
 
-- [ ] Navigate into the `bank-of-codepath-express-api` directory and run `npm install` to get the appropriate dependencies. Make sure the express server is running with `npm run dev` or `npm start` in the `api` directory.
-- [ ] In a new terminal window, navigate into the `bank-of-codepath-ui` directory and run `npm install` to download the frontend dependencies. - [ ] Run `npm run dev` to get the React app started up.
-- [ ] Open up `http://localhost:3000` in the browser to see the current state of the app. The API should be running at `http://localhost:3001`. That value is also stored in the `API_BASE_URL` variable inside the `constants.js` file in the frontend repo.
+- [X] Navigate into the `bank-of-codepath-express-api` directory and run `npm install` to get the appropriate dependencies. Make sure the express server is running with `npm run dev` or `npm start` in the `api` directory.
+- [X] In a new terminal window, navigate into the `bank-of-codepath-ui` directory and run `npm install` to download the frontend dependencies. - [X] Run `npm run dev` to get the React app started up.
+- [X] Open up `http://localhost:3000` in the browser to see the current state of the app. The API should be running at `http://localhost:3001`. That value is also stored in the `API_BASE_URL` variable inside the `constants.js` file in the frontend repo.
   - The tests will run immediately as soon as the frontend starts up.
   - They should all be failing, but that's ok. We'll use them to guide our development during this lab.
   - Every time a file is updated, the tests will be re-run.
@@ -96,58 +96,58 @@ Start by installing the core dependencies for this project.
 
 ### Step 2: The `App.jsx` component
 
-  - [ ] Route Components
-    - [ ] Import the `BrowserRouter`, `Routes`, and `Route` components from `react-router-dom`
-    - [ ] Inside the `return` statement in the `App.jsx` component, nest the `BrowserRouter` component inside the `div` element with a `className` of `app`.
-    - [ ] Nest the `Navbar` component inside the `BrowserRouter` component.
-    - [ ] Place the `Home` component inside a `main` tag that is rendered directly after the `Navbar` component.
+  - [X] Route Components
+    - [X] Import the `BrowserRouter`, `Routes`, and `Route` components from `react-router-dom`
+    - [X] Inside the `return` statement in the `App.jsx` component, nest the `BrowserRouter` component inside the `div` element with a `className` of `app`.
+    - [X] Nest the `Navbar` component inside the `BrowserRouter` component.
+    - [X] Place the `Home` component inside a `main` tag that is rendered directly after the `Navbar` component.
   - [ ] Define routes
-    - [ ] Make the first child of the `main` tag the `Routes` component from `react-router-dom`.
-    - [ ] Use the `Route` component to add an index route for the `Home` component at the `/` route
-    - [ ] Import the `TransactionDetail` component into the `App.jsx` component.
-    - [ ] Add a dynamic route with the base path of `transactions` that is used for displaying a single transaction with the `transactionId` path parameter. Display that page with the `TransactionDetail` component.
-  - [ ] State variables
-    - [ ] Create default state and handlers with React's `useState` hook for the following items. These won't cause any tests to pass, but we'll need them for the upcoming tests
-      - [ ] `isLoading` - a boolean representing whether or not the app is currently requesting data from the API
-      - [ ] `transactions` - the list of bank transaction items fetched from the API
-      - [ ] `transfers` - the list of bank transfer items fetched from the API
-      - [ ] `error` - any errors associated with fetching data from the API
-      - [ ] `filterInputValue` - a string value used to create a controlled input in the `FilterInput.jsx` component
+    - [X] Make the first child of the `main` tag the `Routes` component from `react-router-dom`.
+    - [X] Use the `Route` component to add an index route for the `Home` component at the `/` route
+    - [X] Import the `TransactionDetail` component into the `App.jsx` component.
+    - [X] Add a dynamic route with the base path of `transactions` that is used for displaying a single transaction with the `transactionId` path parameter. Display that page with the `TransactionDetail` component.
+  - [X] State variables
+    - [X] Create default state and handlers with React's `useState` hook for the following items. These won't cause any tests to pass, but we'll need them for the upcoming tests
+      - [X] `isLoading` - a boolean representing whether or not the app is currently requesting data from the API
+      - [X] `transactions` - the list of bank transaction items fetched from the API
+      - [X] `transfers` - the list of bank transfer items fetched from the API
+      - [X] `error` - any errors associated with fetching data from the API
+      - [X] `filterInputValue` - a string value used to create a controlled input in the `FilterInput.jsx` component
 
 ### Step 3: The `Navbar.jsx` and `FilterInput.jsx` components
 
 #### Inside the `Navbar.jsx` component:
     
-  - [ ] Render a nav link
-    - [ ] Render the `Logo` component as the first element nested inside the `nav` element
-    - [ ] Inside the `Logo` component, wrap the `img` element with a `Link` component from `react-router-dom`.
-    - [ ] Pass a `path` prop to the `Logo` component that corresponds to the `Home` route. Then pass that as the `to` prop in the `Link` component
-    - [ ] Clicking on the `img` element in the `Navbar` should now redirect to the Home route. Manually navigate to a different path and try it out in the browser.
+  - [X] Render a nav link
+    - [X] Render the `Logo` component as the first element nested inside the `nav` element
+    - [X] Inside the `Logo` component, wrap the `img` element with a `Link` component from `react-router-dom`.
+    - [X] Pass a `path` prop to the `Logo` component that corresponds to the `Home` route. Then pass that as the `to` prop in the `Link` component
+    - [X] Clicking on the `img` element in the `Navbar` should now redirect to the Home route. Manually navigate to a different path and try it out in the browser.
 
 #### In the `App.jsx` component:
     
-  - [ ] Pass props
-    - [ ] Go ahead and pass the `filterInputValue` to the `Navbar` as the `filterInputValue` prop
-    - [ ] Name the state updater function for that variable: `setFilterInputValue`. Pass that function to the `Navbar` as its `setFilterInputValue` prop.
+  - [X] Pass props
+    - [X] Go ahead and pass the `filterInputValue` to the `Navbar` as the `filterInputValue` prop
+    - [X] Name the state updater function for that variable: `setFilterInputValue`. Pass that function to the `Navbar` as its `setFilterInputValue` prop.
 
 #### Inside the `Navbar.jsx` component:
     
-  - [ ] Create a controlled input
-    - [ ] Pass the `filterInputValue` to the `FilterInput.jsx` component as its `inputValue` prop.
-    - [ ] Define a function called `handleOnInputChange` that takes in a `change` event and calls the `setFilterInputValue` function with the new input value extracted from the event.
-    - [ ] Pass the `handleOnInputChange` function to the `FilterInput.jsx` component as its `handleOnChange` prop.
+  - [X] Create a controlled input
+    - [X] Pass the `filterInputValue` to the `FilterInput.jsx` component as its `inputValue` prop.
+    - [X] Define a function called `handleOnInputChange` that takes in a `change` event and calls the `setFilterInputValue` function with the new input value extracted from the event.
+    - [X] Pass the `handleOnInputChange` function to the `FilterInput.jsx` component as its `handleOnChange` prop.
 
 #### Inside the `FilterInput.jsx` component:
     
-  - [ ] Create a controlled input
-    - [ ] Pass the appropriate props to the `input` element to create a controlled input.
-    - [ ] Typing into the input should now update state. Use the React devtools to confirm this
+  - [X] Create a controlled input
+    - [X] Pass the appropriate props to the `input` element to create a controlled input.
+    - [X] Typing into the input should now update state. Use the React devtools to confirm this
 
 ### Step 4: The `Home.jsx` component
 
 #### In the `App.jsx` component
-  - [ ] Pass props
-    - [ ] Pass the state variables and updater functions as props to the `Home.jsx` component as needed:
+  - [X] Pass props
+    - [X] Pass the state variables and updater functions as props to the `Home.jsx` component as needed:
       - `transactions`
       - `setTransactions`
       - `transfers`
@@ -159,27 +159,27 @@ Start by installing the core dependencies for this project.
       - `filterInputValue`
 
 #### In the `Home.jsx` component
-  - [ ] Fetch data
-    - [ ] Create a `useEffect` hook that runs whenever the `Home.jsx` component is mounted to the screen
-      - [ ] When the effect kicks off, it should set `isLoading` to true
-      - [ ] That function should fetch all transactions and transfers from the API. You can either create two separate `useEffect` hooks to accomplish this, or do them both in the same hook. Either way, make sure to send two HTTP requests to the `/transactions` and `/transfers` endpoints with the `axios.get` method.
-      - [ ] If an error occurs while fetching data, it should be added to state.
-      - [ ] When data is returned from fetching data, it should be set in state accordingly.
-      - [ ] When the function has finished executing, it should set `isLoading` to false
-      - [ ] Make sure to call the function at the end of the `useEffect` hook.
-  - [ ] Custom rendering
-    - [ ] Loading
-      - [ ] While the app is fetching data, the `Home.jsx` component should have an `isLoading` prop equal to `true`.
-        - [ ] When that prop is `true`, it should render an `h1` element with the text: `"Loading..."
-        - [ ] Otherwise, render the `BankActivity` component. It should always render the `AddTransaction` component.
+  - [X] Fetch data
+    - [X] Create a `useEffect` hook that runs whenever the `Home.jsx` component is mounted to the screen
+      - [X] When the effect kicks off, it should set `isLoading` to true
+      - [X] That function should fetch all transactions and transfers from the API. You can either create two separate `useEffect` hooks to accomplish this, or do them both in the same hook. Either way, make sure to send two HTTP requests to the `/transactions` and `/transfers` endpoints with the `axios.get` method.
+      - [X] If an error occurs while fetching data, it should be added to state.
+      - [X] When data is returned from fetching data, it should be set in state accordingly.
+      - [X] When the function has finished executing, it should set `isLoading` to false
+      - [X] Make sure to call the function at the end of the `useEffect` hook.
+  - [X] Custom rendering
+    - [X] Loading
+      - [X] While the app is fetching data, the `Home.jsx` component should have an `isLoading` prop equal to `true`.
+        - [X] When that prop is `true`, it should render an `h1` element with the text: `"Loading..."
+        - [X] Otherwise, render the `BankActivity` component. It should always render the `AddTransaction` component.
     - Error
-      - [ ] If the `Home.jsx` component receives any defined value for its `error` prop, it should render an error message inside of an `h2` element with the className of `error`.
-  - [ ] Filtering transactions
-    - [ ] The `Home.jsx` component should create a `filteredTransactions` array using its `transactions` prop.
-    - [ ] If its `filterInputValue` prop is NOT an empty string:
-      - [ ] It should filter the transactions based on whether or not the lowercased `description` property of a transaction contains the lowercased `filterInputValue`
-      - [ ] Otherwise, it should just be the raw array passed as the `transactions` prop.
-    - [ ] The `filteredTransactions` array should be passed to the `BankActivity` component as its `transactions` prop.
+      - [X] If the `Home.jsx` component receives any defined value for its `error` prop, it should render an error message inside of an `h2` element with the className of `error`.
+  - [X] Filtering transactions
+    - [X] The `Home.jsx` component should create a `filteredTransactions` array using its `transactions` prop.
+    - [X] If its `filterInputValue` prop is NOT an empty string:
+      - [X] It should filter the transactions based on whether or not the lowercased `description` property of a transaction contains the lowercased `filterInputValue`
+      - [X] Otherwise, it should just be the raw array passed as the `transactions` prop.
+    - [X] The `filteredTransactions` array should be passed to the `BankActivity` component as its `transactions` prop.
 
 ### Step 5: The `AddTransaction.jsx` component
 
@@ -188,27 +188,27 @@ This component is responsible for adding a new transaction to the Bank. We'll be
 #### In the `App.jsx` component
 
   - [ ] Define state variables and pass props
-    - [ ] Create a new state variable and updater function - `newTransactionForm` and `setNewTransactionForm`
-      - [ ] The `newTransactionForm` state variable should be an object with 3 form fields - `category`, `description`, and `amount`
-    - [ ] Also create one for the `isCreating` state with the `setIsCreating` state updater function
-    - [ ] Pass all of them to the `Home.jsx` component as props
+    - [X] Create a new state variable and updater function - `newTransactionForm` and `setNewTransactionForm`
+      - [X] The `newTransactionForm` state variable should be an object with 3 form fields - `category`, `description`, and `amount`
+    - [X] Also create one for the `isCreating` state with the `setIsCreating` state updater function
+    - [X] Pass all of them to the `Home.jsx` component as props
  
 #### In the `Home.jsx` component
 
-  - [ ] Pass props
-      - [ ] Pass the `isCreating` and `setIsCreating` props directly to the `AddTransaction` component as props
-      - [ ] Pass the `newTransactionForm` to the `AddTransaction` component as its `form` prop
-      - [ ] Pass the `setNewTransactionForm` to the `AddTransaction` component as its `setForm` prop
-      - [ ] Define a `handleOnSubmitNewTransaction` function and pass it to the `AddTransaction` component as the `handleOnSubmit` prop
+  - [X] Pass props
+      - [X] Pass the `isCreating` and `setIsCreating` props directly to the `AddTransaction` component as props
+      - [X] Pass the `newTransactionForm` to the `AddTransaction` component as its `form` prop
+      - [X] Pass the `setNewTransactionForm` to the `AddTransaction` component as its `setForm` prop
+      - [X] Define a `handleOnSubmitNewTransaction` function and pass it to the `AddTransaction` component as the `handleOnSubmit` prop
 
 #### In the `AddTransaction.jsx` component
 
   - [ ] Form management
-      - [ ] Create a `handleOnFormFieldChange` function
-        - [ ] It should take a `change` event as its single argument.
-        - [ ] That function should then update individual fields in the form using the `change` event.
-        - [ ] Pass that function to the `AddTransactionForm` component as its `handleOnFormFieldChange` prop.
-        - [ ] Go ahead and pass the other required props to the `AddTransactionForm` component as indicated by the tests
+      - [X] Create a `handleOnFormFieldChange` function
+        - [X] It should take a `change` event as its single argument.
+        - [X] That function should then update individual fields in the form using the `change` event.
+        - [X] Pass that function to the `AddTransactionForm` component as its `handleOnFormFieldChange` prop.
+        - [X] Go ahead and pass the other required props to the `AddTransactionForm` component as indicated by the tests
 
 #### In the `AddTransactionForm` component
 
