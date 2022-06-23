@@ -43,6 +43,13 @@
       "amount": "100",
       "description": "Something cool",
       "category": "Income"
+    },
+    {
+      "id": 6,
+      "postedAt": "2022-06-23T05:33:11.642Z",
+      "description": "hey",
+      "category": "hi",
+      "amount": 20
     }
   ]
 }

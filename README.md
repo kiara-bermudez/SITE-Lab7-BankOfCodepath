@@ -247,29 +247,29 @@ This component is responsible for adding a new transaction to the Bank. We'll be
 
 ### Step 7: The `TransactionDetail` component
 
-  - [ ] Define state variables
-    - [ ] Inside the `TransactionDetail.jsx` component, create some state variables and state updater functions:
-      - [ ] `hasFetched` and `setHasFetched` - default to `false`
-      - [ ] `transaction` and `setTransaction` - default to `{}`
-      - [ ] `isLoading` and `setIsLoading`
-      - [ ] `error` and `setError`
-  - [ ] Extract url params
-    - [ ] Import the `useParams` hook from `react-router-dom`
-    - [ ] Use it to extract the `transactionId` from the url route and store it in the `transactionId` variable
+  - [X] Define state variables
+    - [X] Inside the `TransactionDetail.jsx` component, create some state variables and state updater functions:
+      - [X] `hasFetched` and `setHasFetched` - default to `false`
+      - [X] `transaction` and `setTransaction` - default to `{}`
+      - [X] `isLoading` and `setIsLoading`
+      - [X] `error` and `setError`
+  - [X] Extract url params
+    - [X] Import the `useParams` hook from `react-router-dom`
+    - [X] Use it to extract the `transactionId` from the url route and store it in the `transactionId` variable
   - [ ] Fetch resources based on url params
     - [ ] Create a `useEffect` hook inside the component. Inside it:
-      - [ ] Define an async function called `fetchTransactionById`.
-        - [ ] That function should start by setting `isLoading` to `true` and `hasFetched` to `false`.
-        - [ ] Then it should use `axios.get` method to issue a `GET` request to the API to fetch a single transaction by its id.
-        - [ ] If there is an error, set that error in state.
-        - [ ] If valid data is returned, update the `transaction` state value.
-        - [ ] Set `isLoading` to `false` and `hasFetched` at the end of the function no matter what.
-        - [ ] Make sure to call that function at the end of the `useEffect` hook.
-      - [ ] Add the `transactionId` to the `useEffect` hook's dependency array so that it runs each time the url route changes
-  - [ ] Render proper component values
-    - [ ] The `TransactionDetail` component should then pass the correct props to the `TransactionCard` component
-    - [ ] The `TransactionCard` component should render the proper values when the `transaction` is valid
-    - [ ] If no valid `transaction` is returned for that `url`, `isLoading` is `false`, and `hasFetched` is `true`, then the `TransactionCard` component should render only render the `transactionId` inside an `h3` element in the `card-header`, along with an `h1` tag that says `Not Found`.
+      - [X] Define an async function called `fetchTransactionById`.
+        - [X] That function should start by setting `isLoading` to `true` and `hasFetched` to `false`.
+        - [X] Then it should use `axios.get` method to issue a `GET` request to the API to fetch a single transaction by its id.
+        - [X] If there is an error, set that error in state.
+        - [X] If valid data is returned, update the `transaction` state value.
+        - [X] Set `isLoading` to `false` and `hasFetched` at the end of the function no matter what.
+        - [X] Make sure to call that function at the end of the `useEffect` hook.
+      - [X] Add the `transactionId` to the `useEffect` hook's dependency array so that it runs each time the url route changes
+  - [X] Render proper component values
+    - [X] The `TransactionDetail` component should then pass the correct props to the `TransactionCard` component
+    - [X] The `TransactionCard` component should render the proper values when the `transaction` is valid
+    - [X] If no valid `transaction` is returned for that `url`, `isLoading` is `false`, and `hasFetched` is `true`, then the `TransactionCard` component should render only render the `transactionId` inside an `h3` element in the `card-header`, along with an `h1` tag that says `Not Found`.
 
 Congrats! All tests should now be passing and the application should be fully complete. Try it out against the live API to make sure everything is working as expected!
 

@@ -79,10 +79,6 @@ export default function Home(props) {
 
   }
 
-  const handleOnSubmitNewTransaction = () => {
-
-  }
-
   const handleOnCreateTransaction = async () => {
 
     props.setIsCreating(true);
@@ -95,8 +91,7 @@ export default function Home(props) {
       const transactionData = response.data.transaction;
 
       props.setTransactions(oldTransactions => [...oldTransactions, {...transactionData, id:oldTransactions.length}]);
-
-      console.log("new trans array", props.transactions);
+      
     })
     .catch(function (error) {
       props.setError(error);
@@ -107,7 +102,7 @@ export default function Home(props) {
       props.setIsCreating(false);
     })
     
-    
+    console.log("new trans array", props.transactions);
   }
 
   return (

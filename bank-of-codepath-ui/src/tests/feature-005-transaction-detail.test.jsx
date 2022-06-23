@@ -180,7 +180,7 @@ export function testTransactionDetail(App) {
         "The `TransactionDetail` component should render without crashing" +
           " even when the `transactionId` in the url doesn't correlate to a valid transaction."
       )
-
+        debugger;
       await waitFor(async () => assert.ok(await workerWithRequests.allRequestsForActiveTestsHaveBeenMocked()), {
         container,
       })
