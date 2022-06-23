@@ -26,9 +26,9 @@ By the end of this lab you will be able to...
 
 #### Core Features
 
-- [ ] Users can add new transaction to bank: Takes in description, category, and amount. Be sure to specify what unit of currency the amount is in (i.e USD, cents, etc.)
-- [ ] New transactions will be updated in the activity section with most recent at the bottom.
-- [ ] Allows users to search in activities based on key words or phrases.
+- [X] Users can add new transaction to bank: Takes in description, category, and amount. Be sure to specify what unit of currency the amount is in (i.e USD, cents, etc.)
+- [X] New transactions will be updated in the activity section with most recent at the bottom.
+- [X] Allows users to search in activities based on key words or phrases.
 
 #### Stretch Features
 - [ ] Display the current total balance of the user's bank account on the Home Page.
@@ -229,7 +229,7 @@ This component is responsible for adding a new transaction to the Bank. We'll be
         - [X] If anything goes wrong, it should call the `setError` function with the error and set `isCreating` to `false`
         - [X] Otherwise, it should take the new transaction returned from the API and add it to the `transactions` array in state
         - [X] Finally, it should reset the `newTransactionForm` to its original state and set `isCreating` back to `false`
-  - [ ] The `AddTransaction` component should now let users submit new transactions to the backend that are stored in the database. Try running the app against the live API to see it in action.
+  - [X] The `AddTransaction` component should now let users submit new transactions to the backend that are stored in the database. Try running the app against the live API to see it in action.
 
 ### Step 6: The `BankActivity` component
 
@@ -256,8 +256,8 @@ This component is responsible for adding a new transaction to the Bank. We'll be
   - [X] Extract url params
     - [X] Import the `useParams` hook from `react-router-dom`
     - [X] Use it to extract the `transactionId` from the url route and store it in the `transactionId` variable
-  - [ ] Fetch resources based on url params
-    - [ ] Create a `useEffect` hook inside the component. Inside it:
+  - [X] Fetch resources based on url params
+    - [X] Create a `useEffect` hook inside the component. Inside it:
       - [X] Define an async function called `fetchTransactionById`.
         - [X] That function should start by setting `isLoading` to `true` and `hasFetched` to `false`.
         - [X] Then it should use `axios.get` method to issue a `GET` request to the API to fetch a single transaction by its id.
