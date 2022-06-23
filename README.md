@@ -203,7 +203,7 @@ This component is responsible for adding a new transaction to the Bank. We'll be
 
 #### In the `AddTransaction.jsx` component
 
-  - [ ] Form management
+  - [X] Form management
       - [X] Create a `handleOnFormFieldChange` function
         - [X] It should take a `change` event as its single argument.
         - [X] That function should then update individual fields in the form using the `change` event.
@@ -212,38 +212,38 @@ This component is responsible for adding a new transaction to the Bank. We'll be
 
 #### In the `AddTransactionForm` component
 
-  - [ ] Create controlled inputs
-    - [ ] Make sure each input is given a `name` prop corresponding to the correct field in the `newTransactionForm`.
-    - [ ] Give each input the correct `placeholder` and `type` props, using the tests as a guide
-    - [ ] Give each input the correct `value` and `onChange` props as well
-    - [ ] Test that each one works by entering text into the input and using the React devtools to ensure that the correct field in the `newTransaction` form state variable is being updated
-  - [ ] Handle submit events
-    - [ ] The `button` element with a `className` of `add-transaction` should get passed the `handleOnSubmit` function as its `onClick` prop
+  - [X] Create controlled inputs
+    - [X] Make sure each input is given a `name` prop corresponding to the correct field in the `newTransactionForm`.
+    - [X] Give each input the correct `placeholder` and `type` props, using the tests as a guide
+    - [X] Give each input the correct `value` and `onChange` props as well
+    - [X] Test that each one works by entering text into the input and using the React devtools to ensure that the correct field in the `newTransaction` form state variable is being updated
+  - [X] Handle submit events
+    - [X] The `button` element with a `className` of `add-transaction` should get passed the `handleOnSubmit` function as its `onClick` prop
 
 #### Back in the `Home.jsx` component
 
-  - [ ] Handle submit events
-    - [ ] The `handleOnCreateTransaction` function
-      - [ ] Should be an `async` function that starts by setting `isCreating` to `true`
-      - [ ] Then, it should use the `axios.post` method to issue a `POST` request to the `/transactions` endpoint with the contents of the `newTransactionForm` as its body
-        - [ ] If anything goes wrong, it should call the `setError` function with the error and set `isCreating` to `false`
-        - [ ] Otherwise, it should take the new transaction returned from the API and add it to the `transactions` array in state
-        - [ ] Finally, it should reset the `newTransactionForm` to its original state and set `isCreating` back to `false`
+  - [X] Handle submit events
+    - [X] The `handleOnCreateTransaction` function
+      - [X] Should be an `async` function that starts by setting `isCreating` to `true`
+      - [X] Then, it should use the `axios.post` method to issue a `POST` request to the `/transactions` endpoint with the contents of the `newTransactionForm` as its body
+        - [X] If anything goes wrong, it should call the `setError` function with the error and set `isCreating` to `false`
+        - [X] Otherwise, it should take the new transaction returned from the API and add it to the `transactions` array in state
+        - [X] Finally, it should reset the `newTransactionForm` to its original state and set `isCreating` back to `false`
   - [ ] The `AddTransaction` component should now let users submit new transactions to the backend that are stored in the database. Try running the app against the live API to see it in action.
 
 ### Step 6: The `BankActivity` component
 
 #### Iteration in JSX
 
-  - [ ] The `BankActivity.jsx` component should iterate over its `transactions` prop and render a `TransactionRow` for each one. That component should render JSX wrapped by an element with the `className` of `transaction-row`.
-  - [ ] It should also iterate over its `transfers` prop and render a `TransferRow` for each one. That component should render JSX wrapped by an element with the `className` of `transfer-row`.
+  - [X] The `BankActivity.jsx` component should iterate over its `transactions` prop and render a `TransactionRow` for each one. That component should render JSX wrapped by an element with the `className` of `transaction-row`.
+  - [X] It should also iterate over its `transfers` prop and render a `TransferRow` for each one. That component should render JSX wrapped by an element with the `className` of `transfer-row`.
 
 #### Dynamic `Link` component with `react-router-dom`
     
-  - [ ] Import the `Link` component from `react-router-dom`
-  - [ ] The `TransactionRow` component in the `BankActivity.jsx` file should render JSX wrapped by a `Link` component from `react-router-dom` that links to the correct transaction detail page
-  - [ ] Make sure to dynamically create the `to` prop based on the `id` of each transaction
-  - [ ] Clicking on the `TransactionRow` component should redirect to the `TransactionDetail` page for that transaction
+  - [X] Import the `Link` component from `react-router-dom`
+  - [X] The `TransactionRow` component in the `BankActivity.jsx` file should render JSX wrapped by a `Link` component from `react-router-dom` that links to the correct transaction detail page
+  - [X] Make sure to dynamically create the `to` prop based on the `id` of each transaction
+  - [X] Clicking on the `TransactionRow` component should redirect to the `TransactionDetail` page for that transaction
 
 ### Step 7: The `TransactionDetail` component
 

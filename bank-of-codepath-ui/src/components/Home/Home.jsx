@@ -57,7 +57,7 @@ export default function Home(props) {
     return (
       <>
       {addTransaction}
-      <BankActivity transactions={filteredTransactions}/>
+      <BankActivity transactions={filteredTransactions} transfers={props.transfers}/>
       </>
     )
       
@@ -86,6 +86,7 @@ export default function Home(props) {
   const handleOnCreateTransaction = async () => {
 
     props.setIsCreating(true);
+
     axios.post(`${API_BASE_URL}/bank/transactions`, {transaction:props.newTransactionForm})
     .then(function (response) {
 
@@ -101,8 +102,12 @@ export default function Home(props) {
       props.setError(error);
       
     })
-
-    props.setIsCreating(false);
+    .finally(() => {
+      props.setNewTransactionForm({category: "", description: "", amount: 0});
+      props.setIsCreating(false);
+    })
+    
+    
   }
 
   return (
